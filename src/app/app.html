@@ -1,0 +1,111 @@
+<!-- 
+<div>
+  <h2>IF and IF else Statement</h2>
+  @if(isLoggedIn){
+  <p>Welcome! You are Logged in</p>
+
+  <button (click)="toggleLogin()">Logout</button>
+  }
+  @else{
+
+  <p>Please Login to Continue</p>
+
+  <button (click)="toggleLogin()">Login</button>
+  }
+</div>
+<div>
+  <h2>ELSE IF</h2>
+   @if(marks>0 && marks<=100) { 
+   @if(marks>90){
+    <p>Grade A - Very Good</p>
+    }
+    @else if(marks>70){
+    <p>Grade B - Good</p>
+    }
+    @else if(marks>50){
+    <p>Grade C - Average</p>
+    }
+    @else if(marks>35){
+    <p>Grade D - Pass</p>
+    }
+    @else{
+    <p>Fail</p>
+    }
+   }
+   @else{
+    <p>Invalid Marks</p>
+   }
+    
+  
+
+</div>
+
+<div>
+  <h2>Nested IF</h2>
+  @if(isAdmin){
+    <p>Admin Dashboard is visible</p>
+
+    @if(isActive){
+
+      <p>Account is active</p>
+    }
+    @else{
+      <p>Account is inactive</p>
+    }
+  }
+  @else{
+    <p>You have User Access..</p>
+  }
+</div>
+
+<div id="div3">
+  <h2>For Loop</h2>
+
+  <table border="2">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Marks</th>
+      <th>Address</th>
+      <th>Gender</th>
+    </tr>
+ @for(student of students;track student.id){
+    <tr>
+    
+        <td>{{student.id}}</td>
+         <td>{{student.name}}</td>
+          <td>{{student.marks}}</td>
+           <td>{{student.address}}</td>
+            <td>{{student.gender}}</td>
+     
+    </tr>
+    }
+  </table>
+  
+</div>
+-->
+<div>
+  <h2>Switch Case</h2>
+
+  @switch(orderStatus){
+
+      @case("Shipped"){
+        <p>Your order has been shipped</p>
+      }
+
+      @case("Pending"){
+        <p>Your order is waiting for confirmation</p>
+      }
+
+      @case("Delivered"){
+        <p>Your order has beedn delivered</p>
+      }
+      @case("cancelled"){
+        <p>Your Order has been cancelled</p>
+      }
+      @default{
+        <p>Unknown Order status</p>
+      }
+
+  }
+</div>
